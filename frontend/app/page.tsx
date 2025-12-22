@@ -94,7 +94,7 @@ export default function Home() {
 
         <div id="heroRight" className="flex justify-center items-center">
           <Image
-            src="/images/vegas-sign.png"
+            src="/images/vegas-sign.svg"
             alt="Las Vegas neon sign"
             width={580}
             height={100}
