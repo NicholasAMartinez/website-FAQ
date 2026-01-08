@@ -32,8 +32,8 @@ export default function Home() {
         <section id="home" className="hero-section">
           <header>
             <nav>
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
+              <a id="home-link" href="#home">Home</a>
+              <a id="about-link" href="#about">About</a>
               {/* <a
             href="#sponsor"
             className="no-underline text-[0.95rem] text-white hover:opacity-80"
@@ -66,13 +66,12 @@ export default function Home() {
             </div> */}
           </header>
 
-          {/* <div className="hero-wrapper"> */}
-          {/* Need to refactor text to shrink with screen size */}
+        
           <div className="hero-title">
             <h1 className="title-org">REBEL</h1>
             <h1 className="title-org">HACKS</h1>
             <h1 className="title-school">UNLV 2026</h1>
-            {/* <span className="vegas-sign">
+            <span className="vegas-sign">
               <Image
                 className="vegas-sign"
                 src="/images/VegasSign.png"
@@ -80,7 +79,7 @@ export default function Home() {
                 width={200}
                 height={100}
               />
-            </span> */}
+            </span>
             <p className="hero-description">
               Come together to design, develop, and present projects that tackle
               real-world problems!
@@ -98,7 +97,7 @@ export default function Home() {
               className="hero-image"
             />
           </div>
-          {/* </div> */}
+         
         </section>
 
         <section id="about" className="faq">

@@ -9,8 +9,6 @@
   --step-3: clamp(2.592rem, 1.7518rem + 3.7341vw, 5.8594rem);
   --step-4: clamp(3.1104rem, 2.0268rem + 4.8158vw, 7.3242rem);
   --step-5: clamp(3.7325rem, 2.338rem + 6.1975vw, 9.1553rem);
-  
-  
 }
 
 /* 
@@ -74,7 +72,6 @@ nav a {
 nav a:hover {
   opacity: 0.8;
 }
-
 
 /* HERO CONTENT WRAPPER */
 /* .hero-wrapper {
@@ -168,11 +165,10 @@ nav a:hover {
 /* Tablet Size */
 @media (max-width: 640px) {
   /* Desktop Elements (Hidden) */
-
-  /* .hero-image-wrapper-whole {
+  .hero-image-wrapper-whole {
     display: none;
-  } */
-  /* ---- */
+  }
+  /* ----
 
   /* Mobile Elements (Display) */
   .vegas-sign {
@@ -181,7 +177,20 @@ nav a:hover {
 }
 
 /* Mobile */
-@media (max-width: 475px) {
+@media (max-width: 486px) {
+  #home-link,
+  #about-link {
+    display: none;
+  }
+
+  .hero-section {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "rebel-hacks"
+      "unlv-org image";
+  }
+ 
 }
 
 @media (max-width: 390px) {
