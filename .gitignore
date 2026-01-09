@@ -17,6 +17,7 @@ frontend/.next/*
 # testing
 /coverage
 
+frontend/.env.local
 backend/.env.local
 
 # debug
