@@ -16,6 +16,7 @@
   background: radial-gradient(circle, rgba(0,255,255,0.2), transparent 70%);
   filter: blur(80px);
   z-index: 0;
+  pointer-events: none;
 }
 
 .title {
