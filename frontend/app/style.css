@@ -20,7 +20,6 @@ div {
 /* HERO SECTION */
 .hero-section {
   min-height: 100vh;
-  width: 100%;
   padding-left: 25px;
 
   display: grid;
@@ -92,8 +91,10 @@ nav a:hover {
   display: flex;
   flex-direction: column;
 
-  height: 80%;
-  /* gap: 0.25em; */
+  /* height: 80%; */
+  gap: 0.25em;
+  height: auto;
+  padding-top: 5%;
 }
 
 .hero-image-wrapper-whole {
@@ -102,7 +103,8 @@ nav a:hover {
 
   grid-area: right;
   justify-self: center;
-  height: 80%;
+  max-width: 100%;
+  height: auto;
 }
 
 .title-org,
@@ -126,24 +128,22 @@ nav a:hover {
 
 /* TEXT */
 .hero-description {
-  font-size: var(--step--2);
-  font-weight: 200;
+  font-size: clamp(1rem, 0.845rem + 0.727vw, 1.5rem);
+  font-weight: 300;
   color: #e99806;
   max-width: 500px;
 }
 
 .hero-date {
-  font-size: var(--step--2);
-  font-weight: 200;
+  font-size: clamp(1rem, 0.845rem + 0.727vw, 1.5rem);
+  font-weight: 300;
   color: #00d0f3;
 }
 
 @media screen {
   /* Mobile Elements (Hidden) */
-  .hero-image-wrapper-parts {
-    display: none;
-  }
-  .vegas-sign {
+  .vegas-sign,
+  .red-diamond {
     display: none;
   }
 }
@@ -168,11 +168,35 @@ nav a:hover {
   .hero-image-wrapper-whole {
     display: none;
   }
-  /* ----
 
   /* Mobile Elements (Display) */
-  .vegas-sign {
+  .vegas-sign,
+  .red-diamond {
     display: block;
+  }
+
+  .hero-section {
+    grid-template-areas:
+      "header header"
+      "left left";
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+      "UNLV2026 VegasSign"
+      "RedDiamond VegasSign";
+  }
+
+  .title-org {
+    grid-area: UNLV2026;
+  }
+  .vegas-sign {
+    grid-area: VegasSign;
+    
+  }
+  .red-diamond {
+    grid-area: RedDiamond;
   }
 }
 
@@ -182,15 +206,6 @@ nav a:hover {
   #about-link {
     display: none;
   }
-
-  .hero-section {
-    display: grid;
-    grid-template-areas:
-      "header header"
-      "rebel-hacks"
-      "unlv-org image";
-  }
- 
 }
 
 @media (max-width: 390px) {

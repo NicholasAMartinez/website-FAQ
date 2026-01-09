@@ -32,8 +32,12 @@ export default function Home() {
         <section id="home" className="hero-section">
           <header>
             <nav>
-              <a id="home-link" href="#home">Home</a>
-              <a id="about-link" href="#about">About</a>
+              <a id="home-link" href="#home">
+                Home
+              </a>
+              <a id="about-link" href="#about">
+                About
+              </a>
               {/* <a
             href="#sponsor"
             className="no-underline text-[0.95rem] text-white hover:opacity-80"
@@ -66,20 +70,27 @@ export default function Home() {
             </div> */}
           </header>
 
-        
           <div className="hero-title">
             <h1 className="title-org">REBEL</h1>
             <h1 className="title-org">HACKS</h1>
-            <h1 className="title-school">UNLV 2026</h1>
-            <span className="vegas-sign">
+            <div className="wrapper">
+              <h1 className="title-school">UNLV 2026</h1>
               <Image
                 className="vegas-sign"
-                src="/images/VegasSign.png"
+                src="/images/vegas-sign.png"
                 alt="Las Vegas Neon Sign"
-                width={200}
+                width={300}
                 height={100}
               />
-            </span>
+              <Image
+                className="red-diamond"
+                src="/images/red-diamond.svg"
+                alt="red diamond"
+                width={100}
+                height={40}
+              />
+            </div>
+
             <p className="hero-description">
               Come together to design, develop, and present projects that tackle
               real-world problems!
@@ -92,12 +103,11 @@ export default function Home() {
             <Image
               src="/images/hero-image.svg"
               alt="Las Vegas neon sign"
-              width={580}
+              width={600}
               height={100}
               className="hero-image"
             />
           </div>
-         
         </section>
 
         <section id="about" className="faq">
