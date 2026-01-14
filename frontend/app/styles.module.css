@@ -8,37 +8,35 @@
 }
 
 .heroSection {
-  min-height: 100vh;
   padding-left: 1rem;
   padding-right: 1rem;
 
   display: grid;
-  grid-template-rows: 15%;
+  grid-template-rows: auto 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "header header"
     "left right";
 
-  background-image: radial-gradient(
-    1000px circle at center,
-    #121639 0%,
-    #000000 100%,
-    #1c1f45 100%
-  );
+  background: radial-gradient(ellipse at top, transparent, #080808 65%);
 
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .header {
   grid-area: header;
-  position: fixed;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  padding: 2rem 3rem;
-  width: 100vw;
+  padding: 1rem 3rem;
+
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1.15px;
 }
 
 .nav {
@@ -46,28 +44,25 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background-color: #121639;
-  padding: 0.5rem 1.5rem;
-  border-radius: 1rem;
   color: white;
-  
-  a {
-    font-size: 0.95rem;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 1.15px;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 2rem;
+
+  .loginBtn {
   }
 
-  a:hover {
-    opacity: 0.8;
-  }
-  
   .registerBtn {
     padding: 0.5rem 1.5rem;
     background-color: #fea70a;
     border-radius: 0.75rem;
     color: #ffffff;
-    font-weight: 600;
     cursor: pointer;
   }
 }
@@ -78,20 +73,25 @@
   justify-self: center;
   justify-items: center;
 
+  grid-area: left;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
-  gap: 0.25em;
-  min-height: 100vh;
-  padding-top: 5%;
+  gap: 0.5rem;
+  max-width: 520px;
 }
 
 /* Used on desktop */
 .heroImageWrapper {
   grid-area: right;
-  justify-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   max-width: 100%;
-  min-height: auto;
 }
 
 /* TITLES */
@@ -158,13 +158,19 @@
   }
 
   .heroSection {
-    grid-template-rows: 10%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "left";
   }
 
-  .heroSection {
-    grid-template-areas:
-      "header header"
-      "left left";
+  .header {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .heroTitle {
+    justify-content: flex-start;
+    padding-top: 2rem;
   }
 
   .titleSchoolLogoWrapper {
@@ -241,10 +247,6 @@
 
 /* Mobile */
 @media (max-width: 486px) {
-  .navLink {
-    display: none;
-  }
-
   .heroSection {
     grid-template-rows: 10%;
   }

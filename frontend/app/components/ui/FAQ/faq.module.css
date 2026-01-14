@@ -1,12 +1,11 @@
 .faqWrapper {
   display: flex;
   flex-direction: column;
-  min-height: 50vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   padding: 1rem;
-
- 
+  background-color: #080808;
 }
 
 .accordionHeader {
