@@ -1,4 +1,4 @@
-.about {
+/* .about {
   min-height: 100vh;
 
   padding: 1rem;
@@ -63,12 +63,191 @@
 .trackCS,
 .trackCE {
   background-color: var(--primary); /* neon orange for your theme */
-  color: var(--foreground);
+/* color: var(--foreground);
   padding: 2rem;
   border-radius: 1rem;
   min-width: 250px;
   max-width: 300px;
   text-align: center;
   box-shadow: 0 0 20px rgba(254, 167, 10, 0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s; }*/
+.section {
+  min-height: 100vh;
+  padding: 6.5rem 1rem 7rem;
+ 
+
+
+ background: transparent;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.1rem, 3.2vw, 3.2rem);
+  font-weight: 900;
+  color: #00d0f3;
+  letter-spacing: 0.01em;
+  text-shadow: 0 0 14px rgba(0, 208, 243, 0.25);
+}
+
+.subtitle {
+  margin: 0.9rem auto 0;
+  max-width: 62ch;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+}
+
+/* --- Cards --- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.card {
+  border-radius: 26px;
+  padding: 1.4rem 1.35rem 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: linear-gradient(
+    135deg,
+    rgba(18, 22, 57, 0.55),
+    rgba(8, 8, 8, 0.72)
+  );
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+  transition: transform 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 208, 243, 0.32);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), 0 0 22px rgba(0, 208, 243, 0.12);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.9rem;
+
+  color: #00d0f3;
+  font-weight: 1000;
+
+  background: rgba(0, 208, 243, 0.08);
+  border: 1px solid rgba(0, 208, 243, 0.18);
+  box-shadow: 0 0 18px rgba(0, 208, 243, 0.1);
+}
+
+.cardTitle {
+  margin: 0 0 0.35rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.cardText {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+}
+
+/* --- Tracks --- */
+.tracks {
+  margin-top: 2.3rem;
+}
+
+.tracksTitle {
+  margin: 0 0 1rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.trackGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.trackCard {
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 26px;
+  padding: 1.35rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(18, 22, 57, 0.55),
+    rgba(8, 8, 8, 0.72)
+  );
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+  transition: transform 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.trackCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(254, 167, 10, 0.3);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), 0 0 22px rgba(254, 167, 10, 0.12);
+}
+
+.trackTop {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.trackPill {
+  display: inline-grid;
+  place-items: center;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+
+  background: #fea70a;
+  color: #111;
+  font-weight: 1000;
+  letter-spacing: 0.1em;
+  box-shadow: 0 0 18px rgba(254, 167, 10, 0.25);
+}
+
+.trackName {
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.trackText {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+
+/* --- Responsive --- */
+@media (max-width: 960px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .trackGrid {
+    grid-template-columns: 1fr;
+  }
 }

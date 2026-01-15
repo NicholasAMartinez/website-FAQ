@@ -18,10 +18,9 @@
     "header header"
     "left right";
 
-  background: radial-gradient(circle at top, transparent, #080808 65%);
+  background: transparent;
 
-  background-size: cover;
-  background-repeat: no-repeat;
+  
   min-height: 100vh;
 }
 
@@ -97,26 +96,35 @@
 
 /* TITLES */
 .titleOrg {
-  color: #df4c21;
-  max-width: 90%;
-
+  color: #ff4d5a;
+  text-shadow: 0 0 10px rgba(255, 77, 90, 0.35), 0 0 20px rgba(255, 77, 90, 0.2);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
 }
+
 .titleSchoolText {
-  color: #007083;
- 
+  color: #00d0f3;
+  text-shadow: 0 0 16px rgba(0, 208, 243, 0.4);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 70% of REBEL HACKS;
+  max-width: min-content;
 }
 
 .heroDescription {
   font-size: var(--step--2);
   font-weight: 400;
-  color: #e99806;
+  color: #d6d6d6;
   max-width: 500px;
 }
 
 .heroDate {
+  margin-top: 2%;
   font-size: var(--step--2);
   font-weight: 400;
-  color: #00d0f3;
+  color: #cfcfcf;
 }
 
 @media screen {
