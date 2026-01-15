@@ -32,65 +32,61 @@ export default function About() {
           </p>
         </header>
 
-        <div className={styles.cards}>
-          <article className={styles.card}>
-            <div className={styles.icon} aria-hidden="true">
-              {"</>"}
-            </div>
-            <h3 className={styles.cardTitle}>Build</h3>
-            <p className={styles.cardText}>
-              Create a software or hardware project from scratch with mentors
-              nearby.
-            </p>
-          </article>
+        <div className={styles.marquee}>
+          <div className={styles.marqueeTop}>
+            <span className={styles.badge}>24 HOURS</span>
+            <span className={styles.badgeAlt}>TEAM UP</span>
+            <span className={styles.badge}>DEMO NIGHT</span>
+          </div>
 
-          <article className={styles.card}>
-            <div className={styles.icon} aria-hidden="true">
-              {"⚡"}
-            </div>
-            <h3 className={styles.cardTitle}>Learn</h3>
-            <p className={styles.cardText}>
-              Workshops + teammates = rapid growth. Leave with new skills and
-              confidence.
-            </p>
-          </article>
+          <div className={styles.marqueeBody}>
+            <ul className={styles.bullets}>
+              <li>
+                <span className={styles.dot}></span>
+                Mentors + workshops to help you build fast.
+              </li>
+              <li>
+                <span className={styles.dot}></span>
+                All skill levels welcome — bring friends or find a team.
+              </li>
+              <li>
+                <span className={styles.dot}></span>
+                Present your project and compete for prizes.
+              </li>
+            </ul>
 
-          <article className={styles.card}>
-            <div className={styles.icon} aria-hidden="true">
-              {"🏆"}
+            <div className={styles.ctaRow}>
+              <button className={styles.ctaPrimary} type="button">
+                Get the Details
+              </button>
+              <button className={styles.ctaGhost} type="button">
+                View Schedule
+              </button>
             </div>
-            <h3 className={styles.cardTitle}>Present</h3>
-            <p className={styles.cardText}>
-              Demo your work, get feedback, and compete for prizes.
-            </p>
-          </article>
+          </div>
         </div>
 
-        <section className={styles.tracks} aria-labelledby="tracks-title">
-          <h3 id="tracks-title" className={styles.tracksTitle}>
-            Two Tracks
-          </h3>
+        <div className={styles.tracks}>
+          <h3 className={styles.tracksTitle}>Pick Your Track</h3>
 
-          <div className={styles.trackGrid}>
-            <button className={styles.trackCard} type="button">
-              <div className={styles.trackTop}>
-                <span className={styles.trackPill}>CS</span>
-                <span className={styles.trackName}>Computer Science</span>
-              </div>
-              <p className={styles.trackText}>Web, apps, AI, software tools.</p>
+          <div className={styles.chipRow}>
+            <button className={styles.chip} type="button">
+              <span className={styles.chipRing}></span>
+              <span className={styles.chipCenter}>
+                <span className={styles.chipCode}>CS</span>
+                <span className={styles.chipLabel}>Computer Science</span>
+              </span>
             </button>
 
-            <button className={styles.trackCard} type="button">
-              <div className={styles.trackTop}>
-                <span className={styles.trackPill}>CE</span>
-                <span className={styles.trackName}>Computer Engineering</span>
-              </div>
-              <p className={styles.trackText}>
-                Embedded, hardware, IoT, robotics.
-              </p>
+            <button className={styles.chip} type="button">
+              <span className={styles.chipRing}></span>
+              <span className={styles.chipCenter}>
+                <span className={styles.chipCode}>CE</span>
+                <span className={styles.chipLabel}>Computer Engineering</span>
+              </span>
             </button>
           </div>
-        </section>
+        </div>
       </div>
     </section>
   );

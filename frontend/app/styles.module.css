@@ -19,8 +19,6 @@
     "left right";
 
   background: transparent;
-
-  
   min-height: 100vh;
 }
 
@@ -117,7 +115,7 @@
   font-size: var(--step--2);
   font-weight: 400;
   color: #d6d6d6;
-  max-width: 500px;
+  max-width: 520px;
 }
 
 .heroDate {
@@ -209,8 +207,8 @@
   }
   .redDiamond {
     grid-area: RedDiamond;
-    grid-row: 3 / 1;
-    margin-top: 120%;
+   
+    
   }
 
   .titleOrgWrapper {
@@ -263,11 +261,33 @@
   .nav a {
     display: none;
   }
+  .titleSchoolLogoWrapper{
+    margin-top: -20px;
+  }
+  .vegasSign {
+    width: 300px;
+    
+  }
 }
 
 /* Mobile */
-@media (max-width: 486px) {
+@media (max-width: 375px) {
   .heroSection {
     grid-template-rows: 10%;
   }
+  /* Fixes viewport on iphone se */
+  @media (max-height:  670px){
+    .descriptionDateWrapper{
+      margin-top: -40px;
+    }
+  }
+
+  .vegasSign{
+    width: 290px;
+  }
+
+  .titleSchoolText{
+    font-size: 50px;
+  }
+
 }

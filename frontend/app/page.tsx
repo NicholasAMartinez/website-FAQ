@@ -99,7 +99,7 @@ export default function Home() {
               className={styles.orangeHeart}
             />
           </div>
-          
+
           <div className={styles.titleSchoolLogoWrapper}>
             <h1 className={styles.titleSchoolText}>UNLV 2026</h1>
 
@@ -117,7 +117,6 @@ export default function Home() {
               width={400}
               height={100}
               className={styles.vegasSign}
-            
             />
           </div>
 
@@ -159,7 +158,7 @@ export default function Home() {
       </section>
 
       <section id="about">
-       <About />
+        <About />
       </section>
 
       <section id="faq">

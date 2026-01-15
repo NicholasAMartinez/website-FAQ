@@ -47,7 +47,7 @@
   text-align: left;
   padding: 1rem 1.5rem;
   cursor: pointer;
-  background: transparent;
+
   border: none;
   outline: none;
   transition: background 0.2s ease;
@@ -92,16 +92,4 @@
 
 .chevronOpen {
   transform: rotate(180deg);
-}
-
-/* Fixes gradient spotting on background */
-@media (max-width: 650px) {
-  .faqWrapper {
-    background-image: radial-gradient(
-        circle at bottom left,
-        #111435 0%,
-        transparent 40%
-      ),
-      radial-gradient(circle at 110% 15%, #111435 0%, transparent 40%);
-  }
 }
