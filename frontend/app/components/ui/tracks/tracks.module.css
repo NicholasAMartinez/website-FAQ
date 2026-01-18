@@ -27,33 +27,6 @@
   line-height: 1.6;
 }
 
-.buttonWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.button {
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.75rem;
-  color: #ffffff;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
-  transition:
-    background-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.15s ease;
-}
-
-.active {
-  background-color: #fea70a;
-  box-shadow: 0 0 14px #fea70a99;
-  transform: translateY(-1px);
-}
-
 /* Grid */
 .tracksGrid {
   display: grid;
