@@ -26,12 +26,8 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      <div className={styles.tracks}>
-        <div className={styles.tracksTitle}>Two Tracks</div>
-        <button className={styles.trackCardCS}>CS</button>
-        <button className={styles.trackCardCE}>CE</button>
-      </div>
     </div>
+
+   
   );
 }

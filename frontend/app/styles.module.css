@@ -3,7 +3,7 @@
 .titleSchoolText {
   line-height: 1.1;
   margin: 0;
-  font-size: var(--step-4);
+  font-size: var(--step-5);
   font-weight: 700;
 }
 
@@ -31,10 +31,9 @@
 
   padding: 1rem 3rem;
 
-  font-size: 1rem;
+  font-size: var(--step--2);
   text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 1.15px;
+  font-weight: 600;
 }
 
 .nav {
@@ -50,6 +49,7 @@
 
 .navLink {
   color: white;
+  letter-spacing: 1px;
 }
 
 .buttonWrapper {
@@ -64,6 +64,7 @@
 .registerBtn {
   padding: 0.5rem 1.5rem;
   background-color: #fea70a;
+  box-shadow: 0 0 14px #fea70a99;
   border-radius: 0.75rem;
   color: #ffffff;
   cursor: pointer;
@@ -87,7 +88,9 @@
 /* TITLES */
 .titleOrg {
   color: #ff4d5a;
-  text-shadow: 0 0 10px rgba(255, 77, 90, 0.35), 0 0 20px rgba(255, 77, 90, 0.2);
+  text-shadow:
+    0 0 10px rgba(255, 77, 90, 0.35),
+    0 0 20px rgba(255, 77, 90, 0.2);
   margin-bottom: 0.5rem;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -104,17 +107,17 @@
 }
 
 .heroDescription {
-  font-size: var(--step--2);
+  font-size: var(--step-0);
   font-weight: 400;
   color: var(--sub-text);
-  max-width: 520px;
 }
 
 .heroDate {
-  margin-top: 2%;
-  font-size: var(--step--2);
+  font-size: var(--step-0);
   font-weight: 400;
   color: var(--sub-text);
+
+  margin-top: 2%;
 }
 /* Used on desktop */
 .heroImageWrapper {
@@ -176,10 +179,7 @@
   }
 
   .header {
-    padding: 0.25rem 0.75rem;
-    .header > * {
-      font-size: small;
-    }
+    padding: 1rem 0.75rem;
   }
 
   .heroTitle {
@@ -204,7 +204,7 @@
   .vegasSign {
     grid-area: VegasSign;
     grid-column: 3/1;
-    margin-left: 20%;
+    margin-left: 25%;
   }
   .redDiamond {
     grid-area: RedDiamond;
@@ -238,13 +238,13 @@
 
   .heroDescription {
     grid-area: description;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .heroDate {
     grid-area: date;
     margin-top: 3%;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .orangeDiamond {
@@ -260,10 +260,16 @@
   .nav a {
     display: none;
   }
+  .loginBtn,
+  .registerBtn {
+    display: none;
+  }
+
   .titleSchoolLogoWrapper {
     margin-top: -20px;
   }
   .vegasSign {
+    margin-left: 28%;
     width: 300px;
   }
 }
@@ -281,10 +287,7 @@
   }
 
   .vegasSign {
-    width: 290px;
-  }
-
-  .titleSchoolText {
-    font-size: 50px;
+    margin-top: 20%;
+    width: 270px;
   }
 }

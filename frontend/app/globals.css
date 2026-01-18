@@ -10,14 +10,16 @@
   --sub-text: #cfcfcf;
 
   /* Utopia scale */
-  --step--2: clamp(1rem, 0.5rem + 1.0038vw, 1.2rem);
-  --step--1: clamp(1.25rem, 0.9543rem + 1.3143vw, 2.4rem);
-  --step-0: clamp(1.6rem, 1.2rem + 1.85vw, 3rem);
-  --step-1: clamp(1.8rem, 1.2986rem + 2.2286vw, 3.75rem);
-  --step-2: clamp(2.16rem, 1.5101rem + 2.8886vw, 4.6875rem);
-  --step-3: clamp(2.592rem, 1.7518rem + 3.7341vw, 5.8594rem);
-  --step-4: clamp(2.9rem, 2.0268rem + 4.8158vw, 6.3rem);
-  --step-5: clamp(3.7325rem, 2.338rem + 6.1975vw, 9.1553rem);
+
+  --step--2: clamp(0.95rem, 0.88rem + 0.3vw, 1.05rem);
+  --step--1: clamp(1.1rem, 1.02rem + 0.45vw, 1.35rem);
+  --step-0: clamp(1.25rem, 1.15rem + 0.6vw, 1.6rem); /* body */
+  --step-1: clamp(1.55rem, 1.35rem + 0.9vw, 2.1rem);
+  --step-2: clamp(1.95rem, 1.65rem + 1.3vw, 2.8rem);
+  --step-3: clamp(2.45rem, 2rem + 1.9vw, 3.8rem);
+  --step-4: clamp(3.1rem, 2.5rem + 2.8vw, 5.2rem);
+  --step-5: clamp(3.9rem, 3.1rem + 4vw, 7.5rem); /* hero */
+  
 }
 
 /* @theme inline {

@@ -1,0 +1,100 @@
+.tracksSection {
+  padding: 4rem 1rem;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.tracksContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tracksHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.tracksTitle {
+  color: var(--sub-header);
+  font-size: var(--step-2);
+  text-shadow: 0 0 16px rgba(0, 208, 243, 0.35);
+}
+
+.tracksSubtitle {
+  max-width: 720px;
+  margin: 0.75rem auto 1.5rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.15s ease;
+}
+
+.active {
+  background-color: #fea70a;
+  box-shadow: 0 0 14px #fea70a99;
+  transform: translateY(-1px);
+}
+
+/* Grid */
+.tracksGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+}
+
+/* Cards */
+.trackCard {
+  grid-column: span 6;
+  padding: 1.25rem;
+  border-radius: 18px;
+  background: rgb(15, 18, 46);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.trackName {
+  color: white;
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.trackDesc {
+  color: var(--sub-text);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+
+
+.trackCardGrand {
+  grid-column: span 12;
+}
+
+@media (max-width: 900px) {
+  .trackCard {
+    grid-column: span 12;
+  }
+}

@@ -7,6 +7,7 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 import FAQ from "./components/ui/faq/Faq";
 import About from "./components/ui/about/About";
+import Tracks from "./components/ui/tracks/Tracks";
 import Footer from "./components/ui/footer/Footer";
 
 interface Question {
@@ -57,19 +58,14 @@ export default function Home() {
       <section id="home" className={styles.heroSection}>
         <header className={styles.header}>
           <nav className={styles.nav}>
-            <div className={styles.secLogo}>
-              <Image
-                src="/images/sec-logo.png"
-                alt="sec logo"
-                width={70}
-                height={70}
-              ></Image>
-            </div>
             <a href="#home" className={styles.navLink}>
               Home
             </a>
             <a href="#about" className={styles.navLink}>
               About
+            </a>
+            <a href="#tracks" className={styles.navLink}>
+              Tracks
             </a>
             <a href="#faq" className={styles.navLink}>
               FAQ
@@ -84,7 +80,6 @@ export default function Home() {
               <Link href="#">Register</Link>
             </button>
           </div>
-          
         </header>
 
         <div className={styles.heroTitle}>
@@ -155,11 +150,10 @@ export default function Home() {
           />
         </div>
       </section>
-
-      <section id="about">
+      {/* <section id="about">
         <About />
-      </section>
-
+      </section> */}
+      <Tracks />
       <section id="faq">
         <FAQ questions={faqQuestions} allowMultiple={true} />
       </section>
