@@ -19,7 +19,7 @@
     "left right";
 
   background: transparent;
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .header {
@@ -272,6 +272,7 @@
     margin-left: 28%;
     width: 300px;
   }
+
 }
 
 /* Mobile */
@@ -290,4 +291,8 @@
     margin-top: 20%;
     width: 270px;
   }
+}
+
+.tracksSection {
+  padding: 1rem 1.5rem;
 }

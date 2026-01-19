@@ -6,7 +6,7 @@ import axios from "axios";
 import { useState } from "react";
 import styles from "./styles.module.css";
 import FAQ from "./components/ui/faq/Faq";
-import About from "./components/ui/about/About";
+import Hamburger from "./components/ui/hamburger/Hamburger";
 import Tracks from "./components/ui/tracks/Tracks";
 import Footer from "./components/ui/footer/Footer";
 
@@ -57,12 +57,11 @@ export default function Home() {
     <main>
       <section id="home" className={styles.heroSection}>
         <header className={styles.header}>
+          <Hamburger />
+
           <nav className={styles.nav}>
             <a href="#home" className={styles.navLink}>
               Home
-            </a>
-            <a href="#about" className={styles.navLink}>
-              About
             </a>
             <a href="#tracks" className={styles.navLink}>
               Tracks
@@ -153,7 +152,9 @@ export default function Home() {
       {/* <section id="about">
         <About />
       </section> */}
-      <Tracks />
+      <section id="tracks">
+        <Tracks />
+      </section>
       <section id="faq">
         <FAQ questions={faqQuestions} allowMultiple={true} />
       </section>
