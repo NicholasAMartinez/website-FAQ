@@ -272,11 +272,21 @@
     margin-left: 28%;
     width: 300px;
   }
+}
 
+@media (max-width: 465px) {
+  .titleOrg,
+  .titleSchoolText {
+    font-size: 58px;
+  }
+
+  .vegasSign {
+    margin-left: 26%;
+  }
 }
 
 /* Mobile */
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   .heroSection {
     grid-template-rows: 10%;
   }
@@ -287,12 +297,33 @@
     }
   }
 
+  .titleSchoolText,
+  .titleOrg {
+    font-size: 48px;
+    margin: 0;
+  }
+  .titleSchoolLogoWrapper {
+    margin-top: -40px;
+  }
   .vegasSign {
-    margin-top: 20%;
-    width: 270px;
+    margin-left: 24%;
+    width: 240px;
   }
 }
 
 .tracksSection {
   padding: 1rem 1.5rem;
+}
+
+@media (max-width: 376px) {
+  .heroDescription {
+    font-size: 18px;
+  }
+
+  .vegasSign {
+    margin-left: 26%;
+  }
+  .heroDate {
+    font-size: 18px;
+  }
 }
