@@ -141,19 +141,6 @@
   }
 }
 
-/* Desktop Size */
-@media (max-width: 1536px) {
-}
-
-@media (max-width: 1280px) {
-}
-
-@media (max-width: 1024px) {
-}
-
-/* Transition between Desktop - Tablet */
-@media (max-width: 768px) {
-}
 
 /* Tablet Size */
 @media (max-width: 640px) {
