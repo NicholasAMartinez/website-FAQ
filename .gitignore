@@ -2,6 +2,7 @@
 
 # dependencies
 frontend/node_modules
+frontend/.next
 node_modules
 =======
 .idea
@@ -19,6 +20,14 @@ frontend/.next/*
 
 frontend/.env.local
 backend/.env
+
+###> symfony/framework-bundle ###
+backend/config/secrets/prod/prod.decrypt.private.php
+backend/public/bundles/
+backend/var/
+backend/vendor/
+###< symfony/framework-bundle ###
+
 
 # debug
 npm-debug.log*
