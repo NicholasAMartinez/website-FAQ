@@ -101,6 +101,14 @@ class ApiController extends AbstractController
             ], 400);
         }
 
+        // Validate field lengths
+        if (strlen($content['message']) > 250 || strlen($content['name']) > 250 || strlen($content['email']) > 250) {
+            return $this->json([
+                'success' => false,
+                'message' => 'Message is too large.',
+            ], 413);
+        }
+
         // Validate email format
         if (!filter_var($content['email'], FILTER_VALIDATE_EMAIL)) {
             return $this->json([

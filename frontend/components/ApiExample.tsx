@@ -310,6 +310,7 @@ export default function ApiExample() {
         <form onSubmit={handleEmailSubmit}>
           <input
             type="text"
+            maxLength={250}
             placeholder="Your name"
             value={emailFormData.name}
             onChange={(e) => setEmailFormData(prev => ({ ...prev, name: e.target.value }))}
@@ -318,12 +319,14 @@ export default function ApiExample() {
           <input
             type="email"
             placeholder="Your email"
+            maxLength={250}
             value={emailFormData.email}
             onChange={(e) => setEmailFormData(prev => ({ ...prev, email: e.target.value }))}
             required
           />
           <textarea
             placeholder="Your message"
+            maxLength={250}
             value={emailFormData.message}
             onChange={(e) => setEmailFormData(prev => ({ ...prev, message: e.target.value }))}
             required
