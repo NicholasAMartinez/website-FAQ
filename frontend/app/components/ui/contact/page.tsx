@@ -45,6 +45,7 @@ export default function Contact() {
           type="text"
           className={`${styles.input} mt-2 w-full p-3 text-base focus:outline-none`}
           required
+          maxLength={50}
           placeholder="Your Name"
           onChange={(e) => setEmailFormData(prev => ({ ...prev, name: e.target.value }))}
         />
@@ -56,6 +57,7 @@ export default function Contact() {
           type="text"
           className={`${styles.input} mt-2 w-full p-3 text-base focus:outline-none`}
           required
+          maxLength={50}
           placeholder="email@example.com"
           onChange={(e) => setEmailFormData(prev => ({ ...prev, email: e.target.value }))}
         />
@@ -68,6 +70,7 @@ export default function Contact() {
           className={`${styles.textarea}  mt-2 w-full p-3 text-base focus:outline-none resize-none h-32`} 
           placeholder="Your message here..."
           required
+          maxLength={250}
           onChange={(e) => setEmailFormData(prev => ({ ...prev, message: e.target.value }))}
           />
         </label>
