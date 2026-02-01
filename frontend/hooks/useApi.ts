@@ -90,8 +90,8 @@ export function useMutation<TData, TResponse>(
       }
       setState({ data: response, loading: false, error: null });
       return response;
-    } catch (error) {
-      setState({ data: null, loading: false, error: error as Error });
+    } catch (error: any) {
+      setState({ data: null, loading: false, error: new Error(error.response?.data?.message || "An error occurred") });
       return null;
     }
   }, [method, endpoint]);

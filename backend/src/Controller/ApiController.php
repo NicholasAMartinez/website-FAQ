@@ -109,6 +109,22 @@ class ApiController extends AbstractController
             ], 400);
         }
 
+        // Validate that all fields are not empty
+        if (empty(trim($content['name'])) || empty(trim($content['email'])) || empty(trim($content['message']))) {
+            return $this->json([
+                'success' => false,
+                'message' => 'Name, email, and message cannot be empty',
+            ], 400);
+        }
+
+        // Validate maximum length
+        if (strlen($content['name']) > 50 || strlen($content['email']) > 50 || strlen($content['message']) > 250) {
+            return $this->json([
+                'success' => false,
+                'message' => 'One or more fields exceed maximum length',
+            ], 400);
+        }
+
         try {
             // Create the email
             $email = (new Email())

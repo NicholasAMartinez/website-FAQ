@@ -4,6 +4,7 @@ import styles from '@/app/components/ui/contact/contact.module.css';
 import {useState} from "react";
 import {useMutation} from "@/hooks/useApi";
 import type {EmailResponse} from "@/lib/types";
+import { error } from 'console';
 
 export default function Contact() {
   const [emailFormData, setEmailFormData] = useState({
@@ -89,7 +90,7 @@ export default function Contact() {
       )}
       {(emailResponse?.success === false || emailError) && (
         <div>
-          ✗ Error sending email, please double-check your email and try again
+          ✗ {emailError?.message}
         </div>
       )}
     </div>
